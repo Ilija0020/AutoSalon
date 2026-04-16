@@ -56,11 +56,13 @@
       }
 
       .info-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 25px;
 
         .info-item {
+          width: 48%;
           display: flex;
           flex-direction: column;
 
@@ -105,11 +107,13 @@
 
 .cars-list {
   flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 15px;
 
   .car-card {
+    width: 48%;
     background-color: v.$color-light-blue;
     border: 1px solid v.$color-dark-blue;
     border-radius: 12px;
