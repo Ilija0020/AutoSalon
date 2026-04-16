@@ -1,0 +1,39 @@
+@use "./variables" as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100dvh;
+  overflow: hidden;
+  font-family: v.$font-stack;
+  color: v.$color-dark-blue;
+}
+
+#root {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: v.$color-dark-blue;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: v.$color-gold-brown;
+  }
+}
+
+ul {
+  list-style: none;
+}

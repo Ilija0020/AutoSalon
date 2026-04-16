@@ -1,0 +1,23 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.sellers-section {
+  background-image: url("https://i.ibb.co/Z6HPGPj0/road-without-car.jpg");
+  background-size: cover;
+  background-position: center top;
+  padding: 100px 5%;
+
+  .section-title {
+    color: v.$color-dark-blue;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+
+    @include m.mobile {
+      text-align: center;
+    }
+  }
+}
+
+.cars-section {
+  padding: 40px 5%;
+}

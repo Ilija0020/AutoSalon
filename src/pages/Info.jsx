@@ -3,8 +3,8 @@ import Locations from "../components/Locations";
 
 const Info = ({ lokacije}) => {
     return (
-        <section>
-            <h1>Ovde ce se nalaziti sve nase lokacije...</h1>
+        <section className="sellers-section info-page-layout">
+            <h1 className="section-title">Sve naše lokacije: </h1>
             <Locations podaciLokacije={lokacije}/>
         </section>
     )

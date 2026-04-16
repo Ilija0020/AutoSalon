@@ -1,0 +1,39 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+header {
+  background-color: v.$color-light-blue;
+  padding: 0;
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: 40px;
+      margin: 0;
+
+      li {
+        font-weight: bold;
+
+        a {
+          text-decoration: none;
+          color: v.$color-dark-blue;
+          padding: 6px;
+          display: block;
+
+          &:hover,
+          &.active {
+            color: v.$color-gold-brown;
+          }
+        }
+
+        img {
+          height: 25px;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.locations-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @include m.tablet {
+    flex-direction: column;
+  }
+
+  .location-card {
+    background-color: v.$color-location-bg;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    border: 1px solid v.$color-white;
+    text-align: center;
+
+    h3 {
+      color: v.$color-dark-blue;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: v.$color-dark-blue;
+      font-size: 0.9rem;
+
+      span {
+        color: v.$color-gold-brown;
+        font-weight: bold;
+      }
+    }
+  }
+}

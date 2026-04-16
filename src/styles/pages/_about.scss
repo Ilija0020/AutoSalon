@@ -1,0 +1,84 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.about-page-layout {
+  min-height: 100%;
+  padding: 80px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modern-about-card {
+    display: flex;
+    max-width: 850px;
+    background-color: v.$color-white;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 49, 83, 0.08);
+    padding: 50px;
+    gap: 50px;
+    align-items: center;
+
+    @include m.tablet {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .image-wrapper {
+      flex-shrink: 0;
+      width: 220px;
+      height: 220px;
+
+      @include m.tablet {
+        width: 180px;
+        height: 180px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid v.$color-light-blue;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .overline {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: v.$color-gold-brown;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        color: v.$color-dark-blue;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: v.$color-dark-blue;
+        margin-bottom: 15px;
+
+        strong {
+          color: v.$color-gold-brown;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
