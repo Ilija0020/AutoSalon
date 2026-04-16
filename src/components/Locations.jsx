@@ -6,7 +6,7 @@ const Locations = ({podaciLokacije}) => {
             {podaciLokacije.map((lokacija, index) => (
             <div key={index} className="location-card">
                 <h3>{lokacija.name}</h3>
-                <p>{lokacija.address}, {lokacija.city}</p>
+                <p>Adresa: <span>{lokacija.address}, {lokacija.city}</span></p>
             </div>
             ))}
         </div>
